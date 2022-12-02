@@ -1,59 +1,46 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
-    <title>Attendance Sheet</title>
-    <link rel="stylesheet" href="attendance.css">
-    <style>
-        body {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
+        <title>Attendance Sheet</title>
+        <link rel="stylesheet" href="attendance.css">
+        <style>
+            body {
             font-size: 20px;
             font-family: Arial, Helvetica, sans-serif;
-        }
-        
-        .tab2 {
+            }
+            .tab2 {
             margin: auto;
             border-radius: 10px;
             border-collapse: collapse;
             box-shadow: 2px 3px 10px;
             width: 90%;
             background: linear-gradient(to right, rgb(67, 206, 162, 0.5), rgb(24, 90, 157, 0.5));
-        
-        }
-        
-        .tab2 td,
-        .tab2 th {
+            }
+            .tab2 td,
+            .tab2 th {
             border-bottom: 1px solid black;
             height: 50px;
             text-align: center;
-        
-        }
-        
-        .tab2 tr:last-child>td,
-        .tab2 tr:last-child>th {
+            }
+            .tab2 tr:last-child>td,
+            .tab2 tr:last-child>th {
             border-bottom: none;
             border-top: 3px solid black;
-        }
-        
-        .tab2 tr:first-child>th {
+            }
+            .tab2 tr:first-child>th {
             border-bottom: 3px ridge black;
-        
-        }
-        
-        .tab2 th:first-child {
+            }
+            .tab2 th:first-child {
             width: 10px;
             padding: 6px;
-        
-        }
-        
-        .tab2 th:last-child {
+            }
+            .tab2 th:last-child {
             width: 30px;
             padding: 6px;
-        }
-        
-        span:first-child {
-        
+            }
+            span:first-child {
             font-size: 16px;
             background-color: limegreen;
             padding: 6px;
@@ -63,9 +50,8 @@
             border: 2px solid #000;
             border-radius: 6px;
             cursor: pointer;
-        }
-        
-        span:last-child {
+            }
+            span:last-child {
             font-size: 16px;
             background-color: red;
             padding: 6px;
@@ -75,308 +61,293 @@
             border: 2px solid #000;
             border-radius: 6px;
             cursor: pointer;
-        
-        }
-        
-        #save_atd {
+            }
+            #save_atd {
             font-weight: bolder;
             border-radius: 6px;
             padding: 6px;
             background: transparent;
             border: 2px solid black;
             font-size: 15px;
-        
-        }
-        
-        #save_atd:hover {
-        
+            }
+            #save_atd:hover {
             box-shadow: 2px 2px 12px;
             font-size: 20px;
-        
-        }
-        
-        .tab1 {
+            }
+            .tab1 {
             border: none;
             margin: auto;
             border-radius: 10px;
             border-collapse: collapse;
-        
             width: 90%;
-        
-        }
-    </style>
-</head>
-
-<body>
-
- <table class="tab1">
-     <tr>
-         <td id="date" colspan="3"></td>
-     </tr>
- </table>
- <br>
-    <table class="tab2">
-        <tr>
-            <th>Serial no.</th>
-            <th>Students Name</th>
-            <th>Attendence</th>
-        </tr>
-        <tr>
-            <td>1.</td>
-            <td>Khushboo</td>
-            <td><span onclick="present_1()" id="present_1">P</span><span onclick="absent_1()" id="absent_1">A</span></td>
-        </tr>
-        <tr>
-            <td>2.</td>
-            <td>Komal</td>
-            <td><span onclick="present_2()" id="present_2">P</span><span onclick="absent_2()" id="absent_2">A</span></td>
-        </tr>
-        <tr>
-            <td>3.</td>
-            <td>Shraddha</td>
-            <td><span onclick="present_3()" id="present_3">P</span><span onclick="absent_3()" id="absent_3">A</span></td>
-        </tr>
-        <tr>
-            <td>4.</td>
-            <td>Manisha</td>
-            <td><span onclick="present_4()" id="present_4">P</span><span onclick="absent_4()" id="absent_4">A</span></td>
-        </tr>
-        <tr>
-            <td>5.</td>
-            <td>Prachi</td>
-            <td><span onclick="present_5()" id="present_5">P</span><span onclick="absent_5()" id="absent_5">A</span></td>
-        </tr>
-        <tr>
-            <td>6.</td>
-            <td>Himanshu</td>
-            <td><span onclick="present_6()" id="present_6">P</span><span onclick="absent_6()" id="absent_6">A</span></td>
-        </tr>
-        <tr>
-            <td>7.</td>
-            <td>Shubham</td>
-            <td><span onclick="present_7()" id="present_7">P</span><span onclick="absent_7()" id="absent_7">A</span></td>
-        </tr>
-        <tr>
-            <td>8.</td>
-            <td>Yogesh</td>
-            <td><span onclick="present_8()" id="present_8">P</span><span onclick="absent_8()" id="absent_8">A</span></td>
-        </tr>
-        <tr>
-            <td>9.</td>
-            <td>Pushpendra</td>
-            <td><span onclick="present_9()" id="present_9">P</span><span onclick="absent_9()" id="absent_9">A</span></td>
-        </tr>
-        <tr>
-            <td>10.</td>
-            <td>Pradeep</td>
-            <td><span onclick="present_10()" id="present_10">P</span><span onclick="absent_10()" id="absent_10">A</span></td>
-        </tr>
-        <tr>
-            <td>11.</td>
-            <td>Dhanendra</td>
-            <td><span onclick="present_11()" id="present_11">P</span><span onclick="absent_11()" id="absent_11">A</span></td>
-        </tr>
-        <tr>
-            <td>12.</td>
-            <td>Rajan</td>
-            <td><span onclick="present_12()" id="present_12">P</span><span onclick="absent_12()" id="absent_12">A</span></td>
-        </tr>
-        <tr>
-            <td>13.</td>
-            <td>Sajan</td>
-            <td><span onclick="present_13()" id="present_13">P</span><span onclick="absent_13()" id="absent_13">A</span></td>
-        </tr>
-        <tr>
-            <td>14.</td>
-            <td>Vaibhav</td>
-            <td><span onclick="present_14()" id="present_14">P</span><span onclick="absent_14()" id="absent_14">A</span></td>
-        </tr>
-        <tr>
-            <td colspan="3">
-                <button id="save_atd" onclick="save()">
-                    
-              Save Attendance
-              </button></td>
-        </tr>
-
-    </table>
-    
-    <script>
-    
-n = new Date();
-y = n.getFullYear();
-m = n.getMonth() + 1;
-d = n.getDate();
-document.getElementById("date").innerHTML = "Date: " + d + "/" + m + "/" + y;
-
-//***************--1--***************
-function present_1() {
-    document.getElementById("present_1").innerHTML = "Present &#128587";
-    document.getElementById("absent_1").style.display = "none";
-    
-}
-
-function absent_1() {
-    document.getElementById("absent_1").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_1").style.display = "none";
-    
-}
-
-//***************--2--***************
-function present_2() {
-    document.getElementById("present_2").innerHTML = "Present &#128587";
-    document.getElementById("absent_2").style.display = "none";
-}
-
-function absent_2() {
-    document.getElementById("absent_2").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_2").style.display = "none";
-}
-
-//***************--3--***************
-function present_3() {
-    document.getElementById("present_3").innerHTML = "Present &#128587";
-    document.getElementById("absent_3").style.display = "none";
-}
-
-function absent_3() {
-    document.getElementById("absent_3").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_3").style.display = "none";
-}
-
-//***************--4--***************
-function present_4() {
-    document.getElementById("present_4").innerHTML = "Present &#128587";
-    document.getElementById("absent_4").style.display = "none";
-}
-
-function absent_4() {
-    document.getElementById("absent_4").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_4").style.display = "none";
-}
-
-//***************--5--***************
-function present_5() {
-    document.getElementById("present_5").innerHTML = "Present &#128587";
-    document.getElementById("absent_5").style.display = "none";
-}
-
-function absent_5() {
-    document.getElementById("absent_5").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_5").style.display = "none";
-}
-
-//***************--1--***************
-function present_6() {
-    document.getElementById("present_6").innerHTML = "Present &#128587";
-    document.getElementById("absent_6").style.display = "none";
-}
-
-function absent_6() {
-    document.getElementById("absent_6").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_6").style.display = "none";
-}
-
-//***************--7--***************
-function present_7() {
-    document.getElementById("present_7").innerHTML = "Present &#128587";
-    document.getElementById("absent_7").style.display = "none";
-}
-
-function absent_7() {
-    document.getElementById("absent_7").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_7").style.display = "none";
-}
-
-//***************--8--***************
-function present_8() {
-    document.getElementById("present_8").innerHTML = "Present &#128587";
-    document.getElementById("absent_8").style.display = "none";
-}
-
-function absent_8() {
-    document.getElementById("absent_8").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_8").style.display = "none";
-}
-
-//***************--9--***************
-function present_9() {
-    document.getElementById("present_9").innerHTML = "Present &#128587";
-    document.getElementById("absent_9").style.display = "none";
-}
-
-function absent_9() {
-    document.getElementById("absent_9").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_9").style.display = "none";
-}
-
-//***************--10--***************
-function present_10() {
-    document.getElementById("present_10").innerHTML = "Present &#128587";
-    document.getElementById("absent_10").style.display = "none";
-}
-
-function absent_10() {
-    document.getElementById("absent_10").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_10").style.display = "none";
-}
-
-//***************--1--***************
-function present_11() {
-    document.getElementById("present_11").innerHTML = "Present &#128587";
-    document.getElementById("absent_11").style.display = "none";
-}
-
-function absent_11() {
-    document.getElementById("absent_11").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_11").style.display = "none";
-}
-
-//***************--12--***************
-function present_12() {
-    document.getElementById("present_12").innerHTML = "Present &#128587";
-    document.getElementById("absent_12").style.display = "none";
-}
-
-function absent_12() {
-    document.getElementById("absent_12").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_12").style.display = "none";
-}
-
-//***************--13--***************
-function present_13() {
-    document.getElementById("present_13").innerHTML = "Present &#128587";
-    document.getElementById("absent_13").style.display = "none";
-}
-
-function absent_13() {
-    document.getElementById("absent_13").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_13").style.display = "none";
-}
-//***************--14--***************
-function present_14() {
-    document.getElementById("present_14").innerHTML = "Present &#128587";
-    document.getElementById("absent_14").style.display = "none";
-}
-
-function absent_14() {
-    document.getElementById("absent_14").innerHTML = "Absent&nbsp&#128528";
-    document.getElementById("present_14").style.display = "none";
-}
-
-
-
-function save() {
-    
-    confirm("Are you sure to save this attendance");
-    alert("Attandance is saved successfully \n \n Total no. of students present today :");
-    
-
-}
-
-
-
-    </script>
-</body>
-
+            }
+        </style>
+    </head>
+    <body>
+        <table class="tab1">
+            <tr>
+                <td id="date" colspan="3"></td>
+            </tr>
+        </table>
+        <br>
+        <table class="tab2">
+            <tr>
+                <th>Serial no.</th>
+                <th>Students Name</th>
+                <th>Attendence</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Khushboo</td>
+                <td><span onclick="present_1()" id="present_1">P</span><span onclick="absent_1()" id="absent_1">A</span></td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Komal</td>
+                <td><span onclick="present_2()" id="present_2">P</span><span onclick="absent_2()" id="absent_2">A</span></td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Shraddha</td>
+                <td><span onclick="present_3()" id="present_3">P</span><span onclick="absent_3()" id="absent_3">A</span></td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Manisha</td>
+                <td><span onclick="present_4()" id="present_4">P</span><span onclick="absent_4()" id="absent_4">A</span></td>
+            </tr>
+            <tr>
+                <td>5.</td>
+                <td>Prachi</td>
+                <td><span onclick="present_5()" id="present_5">P</span><span onclick="absent_5()" id="absent_5">A</span></td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>Himanshu</td>
+                <td><span onclick="present_6()" id="present_6">P</span><span onclick="absent_6()" id="absent_6">A</span></td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>Shubham</td>
+                <td><span onclick="present_7()" id="present_7">P</span><span onclick="absent_7()" id="absent_7">A</span></td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td>Yogesh</td>
+                <td><span onclick="present_8()" id="present_8">P</span><span onclick="absent_8()" id="absent_8">A</span></td>
+            </tr>
+            <tr>
+                <td>9.</td>
+                <td>Pushpendra</td>
+                <td><span onclick="present_9()" id="present_9">P</span><span onclick="absent_9()" id="absent_9">A</span></td>
+            </tr>
+            <tr>
+                <td>10.</td>
+                <td>Pradeep</td>
+                <td><span onclick="present_10()" id="present_10">P</span><span onclick="absent_10()" id="absent_10">A</span></td>
+            </tr>
+            <tr>
+                <td>11.</td>
+                <td>Dhanendra</td>
+                <td><span onclick="present_11()" id="present_11">P</span><span onclick="absent_11()" id="absent_11">A</span></td>
+            </tr>
+            <tr>
+                <td>12.</td>
+                <td>Rajan</td>
+                <td><span onclick="present_12()" id="present_12">P</span><span onclick="absent_12()" id="absent_12">A</span></td>
+            </tr>
+            <tr>
+                <td>13.</td>
+                <td>Sajan</td>
+                <td><span onclick="present_13()" id="present_13">P</span><span onclick="absent_13()" id="absent_13">A</span></td>
+            </tr>
+            <tr>
+                <td>14.</td>
+                <td>Vaibhav</td>
+                <td><span onclick="present_14()" id="present_14">P</span><span onclick="absent_14()" id="absent_14">A</span></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button id="save_atd" onclick="save()">
+                    Save Attendance
+                    </button>
+                </td>
+            </tr>
+        </table>
+        <script>
+            n = new Date();
+            y = n.getFullYear();
+            m = n.getMonth() + 1;
+            d = n.getDate();
+            document.getElementById("date").innerHTML = "Date: " + d + "/" + m + "/" + y;
+            
+            //***************--1--***************
+            function present_1() {
+                document.getElementById("present_1").innerHTML = "Present &#128587";
+                document.getElementById("absent_1").style.display = "none";
+                
+            }
+            
+            function absent_1() {
+                document.getElementById("absent_1").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_1").style.display = "none";
+                
+            }
+            
+            //***************--2--***************
+            function present_2() {
+                document.getElementById("present_2").innerHTML = "Present &#128587";
+                document.getElementById("absent_2").style.display = "none";
+            }
+            
+            function absent_2() {
+                document.getElementById("absent_2").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_2").style.display = "none";
+            }
+            
+            //***************--3--***************
+            function present_3() {
+                document.getElementById("present_3").innerHTML = "Present &#128587";
+                document.getElementById("absent_3").style.display = "none";
+            }
+            
+            function absent_3() {
+                document.getElementById("absent_3").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_3").style.display = "none";
+            }
+            
+            //***************--4--***************
+            function present_4() {
+                document.getElementById("present_4").innerHTML = "Present &#128587";
+                document.getElementById("absent_4").style.display = "none";
+            }
+            
+            function absent_4() {
+                document.getElementById("absent_4").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_4").style.display = "none";
+            }
+            
+            //***************--5--***************
+            function present_5() {
+                document.getElementById("present_5").innerHTML = "Present &#128587";
+                document.getElementById("absent_5").style.display = "none";
+            }
+            
+            function absent_5() {
+                document.getElementById("absent_5").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_5").style.display = "none";
+            }
+            
+            //***************--1--***************
+            function present_6() {
+                document.getElementById("present_6").innerHTML = "Present &#128587";
+                document.getElementById("absent_6").style.display = "none";
+            }
+            
+            function absent_6() {
+                document.getElementById("absent_6").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_6").style.display = "none";
+            }
+            
+            //***************--7--***************
+            function present_7() {
+                document.getElementById("present_7").innerHTML = "Present &#128587";
+                document.getElementById("absent_7").style.display = "none";
+            }
+            
+            function absent_7() {
+                document.getElementById("absent_7").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_7").style.display = "none";
+            }
+            
+            //***************--8--***************
+            function present_8() {
+                document.getElementById("present_8").innerHTML = "Present &#128587";
+                document.getElementById("absent_8").style.display = "none";
+            }
+            
+            function absent_8() {
+                document.getElementById("absent_8").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_8").style.display = "none";
+            }
+            
+            //***************--9--***************
+            function present_9() {
+                document.getElementById("present_9").innerHTML = "Present &#128587";
+                document.getElementById("absent_9").style.display = "none";
+            }
+            
+            function absent_9() {
+                document.getElementById("absent_9").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_9").style.display = "none";
+            }
+            
+            //***************--10--***************
+            function present_10() {
+                document.getElementById("present_10").innerHTML = "Present &#128587";
+                document.getElementById("absent_10").style.display = "none";
+            }
+            
+            function absent_10() {
+                document.getElementById("absent_10").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_10").style.display = "none";
+            }
+            
+            //***************--1--***************
+            function present_11() {
+                document.getElementById("present_11").innerHTML = "Present &#128587";
+                document.getElementById("absent_11").style.display = "none";
+            }
+            
+            function absent_11() {
+                document.getElementById("absent_11").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_11").style.display = "none";
+            }
+            
+            //***************--12--***************
+            function present_12() {
+                document.getElementById("present_12").innerHTML = "Present &#128587";
+                document.getElementById("absent_12").style.display = "none";
+            }
+            
+            function absent_12() {
+                document.getElementById("absent_12").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_12").style.display = "none";
+            }
+            
+            //***************--13--***************
+            function present_13() {
+                document.getElementById("present_13").innerHTML = "Present &#128587";
+                document.getElementById("absent_13").style.display = "none";
+            }
+            
+            function absent_13() {
+                document.getElementById("absent_13").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_13").style.display = "none";
+            }
+            //***************--14--***************
+            function present_14() {
+                document.getElementById("present_14").innerHTML = "Present &#128587";
+                document.getElementById("absent_14").style.display = "none";
+            }
+            
+            function absent_14() {
+                document.getElementById("absent_14").innerHTML = "Absent&nbsp&#128528";
+                document.getElementById("present_14").style.display = "none";
+            }
+            
+            
+            
+            function save() {
+                
+                confirm("Are you sure to save this attendance");
+                alert("Attandance is saved successfully \n \n Total no. of students present today :");
+  
+            }
+            
+            
+            
+                
+        </script>
+    </body>
 </html>
